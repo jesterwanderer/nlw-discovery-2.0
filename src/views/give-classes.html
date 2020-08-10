@@ -40,19 +40,19 @@
                     
                     <div class="input-block">
                         <label for="name">Nome completo</label>
-                        <input type="name" id="name" required>
+                        <input type="text" name="name" id="name" required>
                     </div>
 
                     <div class="input-block">
                         <label for="avatar">Link da sua foto <small>(comece com https://)</small> </label>
-                        <input type="avatar" id="avatar" type="url" required>
+                        <input name="avatar" id="avatar" type="url" required>
                     </div>
 
                     <div class="input-block">
                         <label for="whatsapp">Whatsapp<small>(somente números)</small></label>
                         <input name="whatsapp" id="whats" type="number" required>
                     </div>
-                    
+
                     <div class="textarea-block">
                         <label for="bio">Biografia</label>
                         <textarea name="bio" id="bio" required></textarea>
@@ -67,24 +67,24 @@
                         <select name="subject" id="subject" required>
                             <option value="" >Selecione uma opção</option>
                             {%for subject in subjects%}
-                                <option value="{{loop.index}}"> 
+                                <option value="{{loop.index}}">
                                     {{subject}}
                                 </option>
                             {%endfor%}
-                        </select>   
+                        </select>
                     </div>
 
                     <div class="input-block">
-                        <label for="cost"> Custo da sua hora/aula 
+                        <label for="cost"> Custo da sua hora/aula
                             <small>(R$)</small>
                         </label>
-                        <input name="cost" type="cost"       id="cost" type="number" required>   
+                        <input name="cost" type="cost"       id="cost" type="number" required>
                     </div>
                 </fieldset>
 
-                    
+
                 <fieldset id="schedule-items">
-                    <legend>Horários Disponíveis 
+                    <legend>Horários Disponíveis
                         <button type="button" id="add-time">+ Novo Horário</button>
                     </legend>
 
@@ -92,14 +92,14 @@
 
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
-                            <select name="weekday[]" required>           
+                            <select name="weekday[]" required>
                                 <option value="">Selecione uma opção</option>
                                 {%for weekday in weekdays%}
-                                    <option value="{{loop.index0}}"> 
+                                    <option value="{{loop.index0}}">
                                         {{weekday}}
                                     </option>
                                 {%endfor%}
-                            </select>                            
+                            </select>
                         </div>
 
                         <div class="input-block">
@@ -113,7 +113,7 @@
                         </div>
                     </div>
 
-                    
+
                 </fieldset>
             </form>
 
@@ -126,7 +126,7 @@
             </footer>
         </main>
     </div>
-        
+
 
 </body>
 </html>
